@@ -34,9 +34,9 @@ int ft_atoi (const char *ptr)
  while (ptr[i] >= 48 && ptr[i] <= 57)
  {
   if (nb > 469762049 && neg == 1)
-			return (-1);
-		else if (nb > 469762049 && neg == -1)
-			return (0);
+   return (-1);
+  else if (nb > 469762049 && neg == -1)
+   return (0);
   nb = nb * 10 + (ptr[i] - 48);
   i++;
  }
