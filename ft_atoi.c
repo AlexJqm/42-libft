@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:48:59 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 17:17:59 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/12 11:34:09 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,6 @@ int ft_atoi (const char *ptr)
  }
  while (ptr[i] >= 48 && ptr[i] <= 57)
  {
-  if (nb > 469762049 && neg == 1)
-   return (-1);
-  else if (nb > 469762049 && neg == -1)
-   return (0);
   nb = nb * 10 + (ptr[i] - 48);
   i++;
  }

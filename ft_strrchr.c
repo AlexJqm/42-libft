@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:48:17 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 14:32:44 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/12 11:28:54 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 char *ft_strrchr (const char *s, int c)
 {
- int size;
- int find;
+ char	*find;
 
- size = 0;
- find = 0;
- while (s[size] != '\0')
- {
-  if (s[size] == (char)c)
-   find = size;
-  size++;
- }
- if (s[size] == '\0' && find != 0)
-  return ((char *)s + find);
- if (c == '\0')
-  return ((char *)s + size);
- return (0);
+	find = (char *)s + ft_strlen(s);
+	while (*find != c)
+	{
+		if (find == s)
+			return (0);
+		find--;
+	}
+	return (find);
 }

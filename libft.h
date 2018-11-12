@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:24:35 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 15:55:03 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/12 11:02:01 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,14 @@ char *ft_strrchr (const char *s, int c);
 char *ft_strstr (const char *s1, const char *s2);
 char *ft_strnstr (const char	*s1, const char *s2, size_t len);
 int ft_strncmp (const char *s1, const char *s2, size_t n);
+int ft_strcmp (const char *s1, const char *s2);
 int ft_atoi (const char *ptr);
 int ft_isalpha (int c);
 int ft_isdigit (int c);
 int ft_isprint (int c);
 int ft_toupper (int c);
 int ft_tolower (int c);
+int ft_isascii (int c);
+int ft_isalnum (int c);
 
 #endif
