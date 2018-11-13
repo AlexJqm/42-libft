@@ -6,15 +6,15 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:45:40 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 15:53:26 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/12 12:59:18 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper (int c)
+int	ft_toupper(int c)
 {
- if (c >= 97 && c <= 122)
-  return (c - 32);
- return (c);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

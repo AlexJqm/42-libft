@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 15:32:48 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 11:54:53 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/12 19:48:47 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/12 19:56:32 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	ft_detect(char *s, char c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	int i;
+	int sp;
+
+	i = 0;
+	sp = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			sp++;
+		i++;
+	}
+	return (sp);
+}
+
+char	**ft_strsplit(char const *s, char c)
+{
+	int i;
+
+	i = 0;
+	while (s[i] != c)
+	{
+		i++;
+	}
 }

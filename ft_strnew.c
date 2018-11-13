@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 15:32:48 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 11:54:53 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/12 16:08:49 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/12 16:59:55 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strnew(size_t size)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+		return (0);
+	ft_bzero((void *)str, size + 1);
+	str[i] = '\0';
+	return (str);
 }

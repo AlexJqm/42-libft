@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-char *ft_strncat (char *dest, const char *src, size_t n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
- unsigned int s;
- int d;
+	unsigned int	s;
+	int				d;
 
- d = 0;
- while (dest[d])
-  d++;
- s = 0;
- while (src[s] && s < n)
- {
-  dest[d] = src[s];
-  d++;
-  s++;
- }
- dest[d] = '\0';
- return (dest);
+	d = 0;
+	while (dest[d])
+		d++;
+	s = 0;
+	while (src[s] && s < n)
+	{
+		dest[d] = src[s];
+		d++;
+		s++;
+	}
+	dest[d] = '\0';
+	return (dest);
 }

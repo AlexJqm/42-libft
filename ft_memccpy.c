@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-void *ft_memccpy (void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
- unsigned const char *cpy_src;
- unsigned char *cpy_dest;
- unsigned int i;
+	unsigned const char	*cpy_src;
+	unsigned char		*cpy_dest;
+	unsigned int		i;
 
- cpy_src = (unsigned char *)src;
- cpy_dest = (unsigned char *)dest;
- i = 0;
- while (i < n)
- {
-  cpy_dest[i] = cpy_src[i];
-  if (cpy_src[i] == (unsigned char)c)
-   return (dest + i + 1);
-  i++;
- }
- return (0);
+	cpy_src = (unsigned char *)src;
+	cpy_dest = (unsigned char *)dest;
+	i = 0;
+	while (i < n)
+	{
+		cpy_dest[i] = cpy_src[i];
+		if (cpy_src[i] == (unsigned char)c)
+			return (dest + i + 1);
+		i++;
+	}
+	return (0);
 }

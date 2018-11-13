@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 15:32:48 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 11:54:53 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/12 15:29:40 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/12 16:43:15 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_memalloc(size_t size)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
-		return (1);
-	return (0);
+	char *str;
+
+	if (size == 0)
+		return (0);
+	if (!(str = (char *)malloc(sizeof(char) * size)))
+		return (0);
+	ft_bzero(str, size);
+	return (str);
 }

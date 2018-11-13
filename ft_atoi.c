@@ -6,35 +6,35 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:48:59 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 11:34:09 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/12 15:50:43 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi (const char *ptr)
+int	ft_atoi(const char *ptr)
 {
- int i;
- int neg;
- int nb;
+	int i;
+	int neg;
+	int nb;
 
- nb = 0;
- i = 0;
- neg = 1;
- if (ptr[i] == '\0')
-  return (0);
- while ((ptr[i] >= 9 && ptr[i] <= 13) || ptr[i] == 32 || ptr[i] == 127)
-  i++;
- if (ptr[i] == 45 || ptr[i] == 43)
- {
-  if (ptr[i] == 45)
-   neg = -1;
-  i++;
- }
- while (ptr[i] >= 48 && ptr[i] <= 57)
- {
-  nb = nb * 10 + (ptr[i] - 48);
-  i++;
- }
- return (nb * neg);
+	nb = 0;
+	i = 0;
+	neg = 1;
+	if (ptr[i] == '\0')
+		return (0);
+	while ((ptr[i] >= 9 && ptr[i] <= 13) || ptr[i] == 32 || ptr[i] == 127)
+		i++;
+	if (ptr[i] == 45 || ptr[i] == 43)
+	{
+		if (ptr[i] == 45)
+			neg = -1;
+		i++;
+	}
+	while (ptr[i] >= 48 && ptr[i] <= 57)
+	{
+		nb = nb * 10 + (ptr[i] - 48);
+		i++;
+	}
+	return (nb * neg);
 }
