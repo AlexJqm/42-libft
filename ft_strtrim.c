@@ -6,13 +6,13 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 19:13:37 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 19:43:43 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/14 09:58:25 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_size(char *s)
+static char	ft_size(char *s)
 {
 	int i;
 	int size;
@@ -35,7 +35,7 @@ char	ft_size(char *s)
 	return (size - space);
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	int		i;
 	int		j;

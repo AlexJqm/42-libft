@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 15:51:43 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/14 10:58:29 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/14 11:52:58 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/14 12:10:39 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list *s;
+	t_list *cpy;
+	t_list *tmp;
 
-	if (!(s = (t_list*)malloc(sizeof(t_list))))
-		return (0);
-	if (content == NULL)
+	if (alst == NULL)
+		return ;
+	cpy = *alst;
+	while (cpy != NULL)
 	{
-		(*s).content = NULL;
-		(*s).content_size = 0;
+		tmp = (*cpy).next;
+		ft_lstdelone(&cpy, del);
+		cpy = tmp;
 	}
-	else
-	{
-		if (!((*s).content = (void*)malloc(content_size)))
-			return (0);
-		ft_memcpy((*s).content, content, content_size);
-		(*s).content_size = content_size;
-	}
-	(*s).next = 0;
-	return (s);
+	*alst = NULL;
 }

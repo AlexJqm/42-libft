@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 15:51:43 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/14 10:58:29 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/14 16:10:40 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/14 16:26:24 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+char	*ft_strset(char *str, int c)
 {
-	t_list *s;
+	int i;
 
-	if (!(s = (t_list*)malloc(sizeof(t_list))))
+	i = 0;
+	if (!str || !c)
 		return (0);
-	if (content == NULL)
+	while (str[i])
 	{
-		(*s).content = NULL;
-		(*s).content_size = 0;
+		str[i] = (char)c;
+		i++;
 	}
-	else
-	{
-		if (!((*s).content = (void*)malloc(content_size)))
-			return (0);
-		ft_memcpy((*s).content, content, content_size);
-		(*s).content_size = content_size;
-	}
-	(*s).next = 0;
-	return (s);
+	return (str);
 }

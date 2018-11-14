@@ -6,13 +6,13 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 11:08:01 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/13 12:36:48 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/14 09:54:59 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_checksign(int *n, int *neg)
+static void	ft_checksign(int *n, int *neg)
 {
 	if (*n < 0)
 	{
@@ -21,7 +21,7 @@ void	ft_checksign(int *n, int *neg)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*s;
 	int		neg;

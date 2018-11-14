@@ -6,13 +6,13 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 19:48:47 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/13 10:43:32 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/14 09:57:59 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_words(char *s, char c)
+static int	ft_count_words(char *s, char c)
 {
 	int i;
 	int nb_words;
@@ -34,7 +34,7 @@ int		ft_count_words(char *s, char c)
 	return (nb_words);
 }
 
-int		ft_strlenbis(char *s, char c)
+static int	ft_strlenbis(char *s, char c)
 {
 	int i;
 
@@ -44,7 +44,7 @@ int		ft_strlenbis(char *s, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int		i;

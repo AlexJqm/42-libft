@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:24:35 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/13 16:54:15 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/14 17:13:09 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,20 @@ void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void			ft_lstadd(t_list **alst, t_list *new);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 char			*ft_strrev(char *str);
 void			ft_putlen(size_t nb);
 int				ft_tablen(void **s);
+char			*ft_strndup(const char *str, size_t size);
+int				ft_isspace(int c);
+int				ft_isblank(int c);
+char			*ft_strset(char *str, int c);
+char			*ft_strnset(char *str, int c, size_t n);
+int				ft_do_op(int nbr1, int nbr2, char op);
 
 #endif
