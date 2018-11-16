@@ -6,7 +6,7 @@
 #    By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 10:24:54 by aljacque          #+#    #+#              #
-#    Updated: 2018/11/14 17:13:13 by aljacque         ###   ########.fr        #
+#    Updated: 2018/11/16 16:24:42 by aljacque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,74 +15,75 @@ NAME			=	libft.a
 # SOURCES #
 
 SRC				=\
-					ft_isalnum.c \
-					ft_isprint.c \
-					ft_memcpy.c \
-					ft_strchr.c \
-					ft_strlcat.c \
-					ft_strncpy.c \
-					ft_tolower.c \
-					ft_isalpha.c \
-					ft_memccpy.c \
-					ft_memmove.c \
-					ft_strcmp.c \
-					ft_strlen.c \
-					ft_strnstr.c \
-					ft_toupper.c \
 					ft_atoi.c \
-					ft_isascii.c \
-					ft_memchr.c \
-					ft_memset.c \
-					ft_strcpy.c \
-					ft_strncat.c \
-					ft_strrchr.c \
 					ft_bzero.c \
+					ft_color.c \
+					ft_do_op.c \
+					ft_isalnum.c \
+					ft_isalpha.c \
+					ft_isascii.c \
+					ft_isblank.c \
 					ft_isdigit.c \
-					ft_memcmp.c \
-					ft_strcat.c \
-					ft_strdup.c \
-					ft_strncmp.c \
-					ft_strstr.c \
-					ft_memalloc.c \
-					ft_memdel.c \
-					ft_strnew.c \
-					ft_strdel.c \
-					ft_strclr.c \
-					ft_striter.c \
-					ft_striteri.c \
-					ft_strmap.c \
-					ft_strmapi.c \
-					ft_strequ.c \
-					ft_strnequ.c \
-					ft_strsub.c \
-					ft_strjoin.c \
-					ft_strtrim.c \
-					ft_strsplit.c \
+					ft_isprint.c \
+					ft_isspace.c \
 					ft_itoa.c \
-					ft_putchar.c \
-					ft_putstr.c \
-					ft_putendl.c \
-					ft_putnbr.c \
-					ft_putchar_fd.c \
-					ft_putstr_fd.c \
-					ft_putendl_fd.c \
-					ft_putnbr_fd.c \
-					ft_lstnew.c \
-					ft_lstdelone.c \
-					ft_lstdel.c \
 					ft_lstadd.c \
+					ft_lstdel.c \
+					ft_lstdelone.c \
 					ft_lstiter.c \
 					ft_lstmap.c \
-					ft_strrev.c \
+					ft_lstnew.c \
+					ft_memalloc.c \
+					ft_memccpy.c \
+					ft_memchr.c \
+					ft_memcmp.c \
+					ft_memcpy.c \
+					ft_memdel.c \
+					ft_memmove.c \
+					ft_memset.c \
+					ft_putchar.c \
+					ft_putchar_fd.c \
+					ft_putendl.c \
+					ft_putendl_fd.c \
 					ft_putlen.c \
-					ft_tablen.c \
+					ft_putnbr.c \
+					ft_putnbr_fd.c \
+					ft_putstr.c \
+					ft_putstr_fd.c \
+					ft_strcat.c \
+					ft_strchr.c \
+					ft_strclr.c \
+					ft_strcmp.c \
+					ft_strcpy.c \
+					ft_strdel.c \
+					ft_strdup.c \
+					ft_strequ.c \
+					ft_striter.c \
+					ft_striteri.c \
+					ft_strjoin.c \
+					ft_strlcat.c \
+					ft_strlen.c \
+					ft_strmap.c \
+					ft_strmapi.c \
+					ft_strncat.c \
+					ft_strncmp.c \
+					ft_strncpy.c \
 					ft_strndup.c \
-					ft_isspace.c \
-					ft_isblank.c \
-					ft_strset.c \
+					ft_strnequ.c \
+					ft_strnew.c \
 					ft_strnset.c \
-					ft_do_op.c
-OBJ				=	*.o
+					ft_strnstr.c \
+					ft_strrchr.c \
+					ft_strrev.c \
+					ft_strset.c \
+					ft_strsplit.c \
+					ft_strstr.c \
+					ft_strsub.c \
+					ft_strtrim.c \
+					ft_swap.c \
+					ft_tolower.c \
+					ft_toupper.c
+OBJ			=	$(SRC:.c=.o)
 HEADER			=	libft.h
 CFLAG			=	-Wall -Werror -Wextra
 

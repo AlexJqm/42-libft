@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:47:01 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 17:58:38 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:29:38 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	if (s1 == NULL || s2 == NULL)
+	if (!s1 || !s2)
 		return (0);
 	if (ft_strcmp(s1, s2) == 0)
 		return (1);

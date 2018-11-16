@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:11:25 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 19:12:54 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:32:32 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ void	ft_striter(char *s, void (*f)(char *))
 
 	i = 0;
 	if (s != NULL && f)
-	{
 		while (s[i])
 		{
 			f(&s[i]);
 			i++;
 		}
-	}
 }

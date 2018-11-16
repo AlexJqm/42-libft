@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:27:43 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/07 16:45:42 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:41:17 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
 	char			*cpy;
 
 	cpy = (char *)s;
-	i = 0;
-	while (i < n)
-	{
+	i = -1;
+	while (++i < n)
 		cpy[i] = 0;
-		i++;
-	}
 }

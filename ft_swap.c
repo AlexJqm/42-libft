@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnset.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 16:16:06 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/16 14:52:49 by aljacque         ###   ########.fr       */
+/*   Created: 2018/11/16 11:40:57 by aljacque          #+#    #+#             */
+/*   Updated: 2018/11/16 11:41:18 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnset(char *str, int c, size_t n)
+void	ft_swap(int *a, int *b)
 {
-	size_t i;
+	int tmp;
 
-	i = 0;
-	if (!str || !c)
-		return (0);
-	while (str[i] && i < n)
-	{
-		str[i] = (char)c;
-		i++;
-	}
-	return (str);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

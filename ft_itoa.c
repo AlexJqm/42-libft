@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 11:08:01 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/14 09:54:59 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 13:05:51 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ char		*ft_itoa(int n)
 	ft_checksign(&n, &neg);
 	while (cpy /= 10)
 		size++;
-	if (!(s = ft_strnew(size += neg)))
+	size = size + neg;
+	if (!(s = ft_strnew(size)))
 		return (0);
 	while (size--)
 	{

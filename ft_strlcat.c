@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:05:27 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 16:18:34 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:47:23 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int k;
+	size_t i;
+	size_t j;
+	size_t k;
 
 	i = 0;
 	j = 0;

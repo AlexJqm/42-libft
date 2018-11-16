@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:03:07 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 11:04:58 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:47:52 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	unsigned int	s;
-	int				d;
+	size_t	s;
+	int		d;
 
 	d = 0;
 	while (dest[d])

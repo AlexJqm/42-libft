@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:35:34 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/13 13:59:44 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:25:27 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 	else
-	{
 		ft_putchar_fd(n + 48, fd);
-	}
 }

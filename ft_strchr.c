@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:12:47 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/08 14:32:12 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 16:07:20 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int size;
 
+	if (!s && c > 255)
+		return (0);
 	size = 0;
 	while (s[size] != '\0')
 	{
@@ -24,6 +26,6 @@ char	*ft_strchr(const char *s, int c)
 		size++;
 	}
 	if (c == '\0')
-		return ((char *)s + size);
+		return ((char *)&s[size]);
 	return (0);
 }

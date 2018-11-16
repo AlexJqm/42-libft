@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 13:33:15 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/07 13:47:11 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:41:22 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const char		*cpy_src;
 	char			*cpy_dest;
-	unsigned int	i;
+	size_t			i;
 
 	cpy_src = (char *)src;
 	cpy_dest = (char *)dest;

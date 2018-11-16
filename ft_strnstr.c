@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:08:08 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/12 12:59:34 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:53:14 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	int i;
-	int j;
-	int k;
+	size_t i;
+	size_t j;
+	size_t k;
 
 	i = 0;
 	k = 0;
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	{
 		i = k;
 		j = 0;
-		while (s1[i] == s2[j] && (unsigned int)i < len)
+		while (s1[i] == s2[j] && i < len)
 		{
 			i++;
 			j++;

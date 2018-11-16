@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:01:11 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/07 16:45:44 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/16 14:48:01 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *ptr, int value, size_t num)
 {
-	unsigned int	i;
-	char			*cpy;
+	size_t	i;
+	char	*cpy;
 
 	cpy = (char *)ptr;
 	i = 0;
