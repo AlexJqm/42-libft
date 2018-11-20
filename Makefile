@@ -6,7 +6,7 @@
 #    By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 10:24:54 by aljacque          #+#    #+#              #
-#    Updated: 2018/11/16 16:24:42 by aljacque         ###   ########.fr        #
+#    Updated: 2018/11/20 15:38:17 by aljacque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRC				=\
 					ft_strcat.c \
 					ft_strchr.c \
 					ft_strclr.c \
+					ft_strclen.c \
 					ft_strcmp.c \
 					ft_strcpy.c \
 					ft_strdel.c \

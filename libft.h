@@ -6,7 +6,7 @@
 /*   By: aljacque <aljacque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:24:35 by aljacque          #+#    #+#             */
-/*   Updated: 2018/11/16 14:56:58 by aljacque         ###   ########.fr       */
+/*   Updated: 2018/11/20 18:37:18 by aljacque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 typedef	struct	s_list
 {
@@ -56,6 +58,7 @@ int				ft_tolower(int c);
 int				ft_toupper(int c);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);
+size_t			ft_strclen(const char *s, char c);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			*ft_memalloc(size_t size);
